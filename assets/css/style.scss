@@ -1,0 +1,254 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+header {
+	border-bottom: 2.5px solid #b5e853;
+	box-shadow: 0px 0px 8px #b5e853;
+}
+
+.head-container {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+
+.head {
+	display: flex;
+	flex-direction: column;
+}
+
+.default-head-title, .home-head-title {
+	text-decoration: none;
+}
+
+.head-main-page, .head-sub-page {
+	color: #b5e853;
+	text-decoration: none;
+}
+
+.head-main-page:hover, .head-sub-page:hover {
+	cursor: pointer;
+}
+
+.head-desc {
+	color: #aaa;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
+	margin-bottom: -8px;
+}
+
+.link-icon {
+	display: inline-flex;
+	flex-wrap: wrap;
+	flex: 1;
+	margin: 4px;
+}
+
+.link-icon:first-child {
+	margin-right: 2px;
+}
+
+.link-icon img:hover {
+	transition: 0.2s ease-in-out;
+	border-radius: 5px;
+	box-shadow: 0px 0px 15px #b5e853;
+}
+
+#github-img {
+	content: url(/assets/images/github.png);
+}
+
+#github-img:before {
+	content: url(/assets/images/github_hover.png);
+}
+
+#github-img:hover {
+	content: url(/assets/images/github_hover.png);
+}
+
+#htb-img {
+	content: url(/assets/images/htb.png);
+}
+
+#htb-img:before {
+	content: url(/assets/images/htb_hover.png);
+}
+
+#htb-img:hover {
+	content: url(/assets/images/htb_hover.png);
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar-links {
+	display: flex;
+	list-style: none;
+}
+
+.navbar-item {
+	display: inline-block;
+	position: relative;
+	list-style-image: none;
+	margin-right: 5%;
+	border-left: 3px outset #b5e853;
+	border-right: 3px outset #b5e853;
+	border-bottom: 3px outset #b5e853;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 0;
+}
+
+.navbar-item:hover {
+	box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+.navbar-item a {
+	position: relative;
+	display: inline-block;
+	text-decoration: underline transparent;
+	transition: text-decoration 300ms ease-in-out;
+	color: #b5e853;
+	height: 115%;
+	text-align: center;
+	padding: 3% 0% 3% 0%;
+	width: 0px;
+}
+
+.navbar-item a:hover {
+	text-decoration-color: #b5e853;
+}
+
+#post-link {
+	color: #e5e7e0;
+	font-size: 115%;
+	text-decoration: none;
+	text-shadow: 0 0 5px rgba(229, 231, 224, 0.5)
+}
+
+#post-link:hover, #post-link:hover div {
+	text-decoration: underline;
+	text-decoration-color: #b5e853;
+}
+
+.content {
+	color: #fff;
+}
+
+/* Mobile devices (Portrait) */
+@media only screen
+and (min-width: 320px) 
+and (max-width: 480px) {
+	.head {
+		margin-top: -7px;
+		margin-left: 10px;
+	}
+
+	.default-head-title {
+		margin-top: 0px;
+	}
+
+	#eehs-img {
+		width: 2.3rem;
+		height: 2.3rem;
+		margin-top: -5px;
+		margin-left: 10px;
+	}
+
+	.links-container {
+		position: absolute;
+		top: 2%;
+		right: 0.8%;
+		width: 2rem;
+	}
+
+	.links {
+		position: absolute;
+		top: 5%;
+		right: 16%;
+	}	
+
+	#github-img {
+		width: 2rem;
+		height: 2rem;	
+	}
+
+	#htb-img {
+		width: 2rem;
+		height: 2rem;	
+	}
+
+	.navbar {
+		margin-top: -60px;
+		margin-left: -4.4%;
+	}
+
+	.navbar-links {
+		font-size: 22px;
+	}
+
+	.navbar-item a {
+		width: 160px;
+		margin: 0px;
+	}
+
+	.posts-list a {
+		margin-left: 7px;
+	}
+}
+
+/* Desktop monitors */
+@media only screen
+and (min-width: 720px) {
+	.head {
+		margin-top: -5px;
+		margin-left: 60px;
+	}
+
+	.default-head-title {
+		margin-top: 12px;
+	}
+
+	.head-desc {
+		margin-right: 60px;
+	}
+
+	#eehs-img {
+		width: 3.5rem;
+		height: 3.5rem;
+		margin-top: -2px;
+		margin-left: 20px;
+	}
+
+	.links-container {
+		position: absolute;
+		top: 10%;
+		right: 1.05%;
+	}
+
+	#github-img, #htb-img {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+
+	.navbar {
+		margin-top: -42px;
+	}
+
+	.navbar-links {
+		margin-top: 0.3%;
+		font-size: 20px;
+	}
+
+	.navbar-item a {
+		width: 170px;
+		margin: 0px;
+	}
+
+	.content {
+		overflow-wrap: break-word; 
+	}
+}

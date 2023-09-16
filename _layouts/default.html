@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+
+{% seo %}
+  </head>
+
+  <body>
+    <header>
+      <div class="head-container">
+	<img id="eehs-img" src="/assets/images/eehs.png"></img>
+	<div class="head">
+	  <a class="default-head-title">
+   	    <h1><a class="head-main-page" href="/">{{ site.title }}</a> / <a class="head-sub-page">{{ page.title }}</a></h1>
+  	    <script>
+	      document.getElementsByClassName("head-sub-page")[0].href = window.location.href;
+	    </script>
+          </a>
+	</div>
+
+        <div class="links-container">
+          <div class="links">
+            <a class="link-icon" href="https://github.com/eehs" target="_blank">
+              <img id="github-img"></img>
+            </a>
+            <a class="link-icon" href="https://app.hackthebox.com/profile/486143" target="_blank">
+              <img id="htb-img"></img>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <li class="navbar-item"><a href="/">Home</a></li>
+        <li class="navbar-item"><a href="/about">About</a></li>
+
+	<script>
+          let navbar_items = document.getElementsByClassName("navbar-item");
+
+          for (let i = 0; i < navbar_items.length; i++) {
+	    let navbar_item_a_tag = navbar_items[i].children[0];
+
+            if (navbar_item_a_tag.href == window.location.href) {
+	      navbar_items[i].style.backgroundColor = "#91b744";
+	      navbar_items[i].style.boxShadow = "none";
+
+              navbar_item_a_tag.style.color = "#262626";
+	      navbar_item_a_tag.style.textDecoration = "none";
+	      navbar_item_a_tag.style.textShadow = "0 0 5px rgba(38, 38, 38, 0.5)";
+            }
+          }
+        </script>
+      </ul>
+    </nav>	
+
+    <div class="container">
+      <section id="main_content">
+        {{ content }}
+      </section>
+    </div>
+  </body>
+</html>
