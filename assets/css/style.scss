@@ -26,6 +26,7 @@ header {
 .head-main-page, .head-sub-page {
 	color: #b5e853;
 	text-decoration: none;
+	text-shadow: none;
 }
 
 .head-main-page:hover, .head-sub-page:hover {
@@ -46,7 +47,7 @@ header {
 }
 
 .link-icon:first-child {
-	margin-right: 2px;
+	margin-right: 4px;
 }
 
 .link-icon img:hover {
@@ -55,15 +56,19 @@ header {
 	box-shadow: 0px 0px 15px #b5e853;
 }
 
+#discord-img {
+	content: url(/assets/images/discord.png);
+}
+
+#discord-img:before, #discord-img:hover {
+	content: url(/assets/images/discord_hover.png);
+}
+
 #github-img {
 	content: url(/assets/images/github.png);
 }
 
-#github-img:before {
-	content: url(/assets/images/github_hover.png);
-}
-
-#github-img:hover {
+#github-img:before, #github-img:hover {
 	content: url(/assets/images/github_hover.png);
 }
 
@@ -71,11 +76,7 @@ header {
 	content: url(/assets/images/htb.png);
 }
 
-#htb-img:before {
-	content: url(/assets/images/htb_hover.png);
-}
-
-#htb-img:hover {
+#htb-img:before, #htb-img:hover {
 	content: url(/assets/images/htb_hover.png);
 }
 
@@ -145,10 +146,16 @@ and (max-width: 480px) {
 	.head {
 		margin-top: -7px;
 		margin-left: 10px;
+		margin-bottom: 20px;
 	}
 
 	.default-head-title {
 		margin-top: 0px;
+	}
+
+	.head-desc {
+		margin-right: 50px;
+		margin-bottom: -25px;
 	}
 
 	#eehs-img {
@@ -160,8 +167,8 @@ and (max-width: 480px) {
 
 	.links-container {
 		position: absolute;
-		top: 2%;
-		right: 0.8%;
+		margin-top: -3%;
+		right: 0%;
 		width: 2rem;
 	}
 
@@ -171,12 +178,7 @@ and (max-width: 480px) {
 		right: 16%;
 	}	
 
-	#github-img {
-		width: 2rem;
-		height: 2rem;	
-	}
-
-	#htb-img {
+	#discord-img, #github-img, #htb-img {
 		width: 2rem;
 		height: 2rem;	
 	}
@@ -206,6 +208,7 @@ and (min-width: 720px) {
 	.head {
 		margin-top: -5px;
 		margin-left: 60px;
+		margin-bottom: 0px;
 	}
 
 	.default-head-title {
@@ -229,7 +232,7 @@ and (min-width: 720px) {
 		right: 1.05%;
 	}
 
-	#github-img, #htb-img {
+	#discord-img, #github-img, #htb-img {
 		width: 2.5rem;
 		height: 2.5rem;
 	}
