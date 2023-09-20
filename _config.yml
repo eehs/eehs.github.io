@@ -25,7 +25,7 @@ baseurl: ""
 url: "https://eehs.github.io" 
 github:
   profile: "https://github.com/eehs"
-google_analytics: "G-YF8K8TMKRL"
+#google_analytics: "G-YF8K8TMKRL"
 
 # Build settings
 remote_theme: pages-themes/hacker@v0.2.0
