@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+code.highlighter-rouge {
+	color: #b5e853;
+}
+
 header {
 	border-bottom: 2.5px solid #b5e853;
 	box-shadow: 0px 0px 8px #b5e853;
@@ -213,6 +217,10 @@ and (min-width: 720px) {
 
 	.default-head-title {
 		margin-top: 12px;
+	}
+
+	.head {
+		margin-right: 200px;
 	}
 
 	.head-desc {
