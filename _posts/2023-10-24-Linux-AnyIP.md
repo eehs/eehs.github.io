@@ -10,6 +10,6 @@ tags: Linux, Networking
 
 <br>
 ## Configuration and use cases
-Assigning an IPv4 subnet to a system can be done with this command: `ip route add local <IPv4 or IPv6 subnet>/<cidr> dev lo`. Connections made to any IP within this subnet now points to this machine.
+Assigning an IPv4 subnet to a system can be done with this command: `ip route add local <IPv4 or IPv6 subnet>/<cidr> dev lo`. Connections made to any IP within this subnet now point to this machine as a result.
 
 Concerning the usage of AnyIP, one might make use of this in say, reverse proxies with DDoS protection (like in the case of [Cloudfare's Spectrum](https://blog.cloudflare.com/how-we-built-spectrum/)), or simulating a network with different services without using VMs/containers, and so on. In the latter's case, we could have an address within a specified range listen as a web server, another running a DHCP server, and so on. All whilst making it look like they originate from different systems.
