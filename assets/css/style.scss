@@ -23,21 +23,21 @@ header {
 	flex-direction: column;
 }
 
-.default-head-title, .home-head-title {
+#head-title {
 	text-decoration: none;
 }
 
-.head-main-page, .head-sub-page {
+#head-title-root, #head-title-child {
 	color: #b5e853;
 	text-decoration: none;
 	text-shadow: none;
 }
 
-.head-main-page:hover, .head-sub-page:hover {
+#head-title-root:hover, #head-title-child:hover {
 	cursor: pointer;
 }
 
-.head-desc {
+#head-desc {
 	color: #aaa;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
 	margin-bottom: -8px;
@@ -117,10 +117,10 @@ header {
 	text-decoration: underline transparent;
 	transition: text-decoration 300ms ease-in-out;
 	color: #b5e853;
-	height: 115%;
 	text-align: center;
 	padding: 3% 0% 3% 0%;
 	width: 0px;
+	height: 82%;
 }
 
 .navbar-item a:hover {
@@ -143,6 +143,10 @@ header {
 	color: #fff;
 }
 
+#page-not-found-container {
+	text-align: center;
+}
+
 /* Mobile devices (Portrait) */
 @media only screen
 and (min-width: 320px) 
@@ -154,11 +158,12 @@ and (max-width: 480px) {
 		margin-bottom: 20px;
 	}
 
-	.default-head-title {
+	#head-title {
 		margin-top: 0px;
+		margin-right: 5px;
 	}
 
-	.head-desc {
+	#head-desc {
 		margin-right: 30px;
 		margin-bottom: -25px;
 	}
@@ -205,26 +210,34 @@ and (max-width: 480px) {
 	.posts-list a {
 		margin-left: 7px;
 	}
+
+	#page-not-found-container {
+		margin-top: 20px;
+	}
+
+	#page-not-found-container img {
+		margin-top: 30%;
+		margin-bottom: 8%;
+		width: 10rem;
+		height: 4.5rem;
+	}
 }
 
-/* Desktop monitors */
+/* Laptops and desktop monitors */
 @media only screen
 and (min-width: 720px) {
 	.head {
 		margin-top: -5px;
 		margin-left: 60px;
 		margin-bottom: 0px;
-	}
-
-	.default-head-title {
-		margin-top: 12px;
-	}
-
-	.head {
 		margin-right: 200px;
 	}
 
-	.head-desc {
+	#head-title {
+		margin-top: 12px;
+	}
+
+	#head-desc {
 		margin-right: 200px;
 	}
 
@@ -262,5 +275,29 @@ and (min-width: 720px) {
 
 	.content {
 		overflow-wrap: break-word; 
+	}
+
+	#page-not-found-container {
+		margin-top: 85px;
+	}
+
+	#page-not-found-container img {
+		margin-bottom: 45px;
+		width: 16rem;
+		height: 5.5rem;
+	}
+}
+
+/* Desktop monitors */
+@media only screen
+and (min-width: 1920px) {
+	#page-not-found-container {
+		margin-top: 220px;
+	}
+
+	#page-not-found-container img {
+		margin-bottom: 45px;
+		width: 17.5rem;
+		height: 6.3rem;
 	}
 }
