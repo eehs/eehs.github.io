@@ -15,12 +15,21 @@
       <div class="head-container">
 	<img id="eehs-img" src="/assets/images/eehs.png"></img>
 	<div class="head">
-	  <a class="default-head-title">
-   	    <h1><a class="head-main-page" href="/">{{ site.title }}</a> / <a class="head-sub-page">{{ page.title }}</a></h1>
-  	    <script>
-	      document.getElementsByClassName("head-sub-page")[0].href = window.location.href;
-	    </script>
-          </a>
+  	  <script>
+	    let head = document.getElementsByClassName("head")[0];
+	
+	    if (window.location.pathname == "/") {
+	      head.innerHTML = "<h1>{{ site.title | default: site.github_repository_name }}</h1><h2 id='head-desc'>{{ site.description | default: site.github.project_tagline }}</h2>";
+	    } else {
+	      head.innerHTML = "<a id='head-title'><h1><a id='head-title-root' href='/'>{{ site.title }}</a> / <a id='head-title-child'></a></h1></a>";
+
+	      let htc = document.getElementById("head-title-child");
+	      let pathname = window.location.pathname;
+
+	      htc.textContent = pathname.charAt(1).toUpperCase() + pathname.slice(2);
+	      htc.href = window.location.href;
+	    }
+	  </script>
 	</div>
 
         <div class="links-container">
