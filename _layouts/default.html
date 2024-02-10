@@ -21,13 +21,8 @@
 	    if (window.location.pathname == "/") {
 	      head.innerHTML = "<h1>{{ site.title | default: site.github_repository_name }}</h1><h2 id='head-desc'>{{ site.description | default: site.github.project_tagline }}</h2>";
 	    } else {
-	      head.innerHTML = "<a id='head-title'><h1><a id='head-title-root' href='/'>{{ site.title }}</a> / <a id='head-title-child'></a></h1></a>";
-
-	      let htc = document.getElementById("head-title-child");
-	      let pathname = window.location.pathname;
-
-	      htc.textContent = pathname.charAt(1).toUpperCase() + pathname.slice(2);
-	      htc.href = window.location.href;
+	      head.innerHTML = "<a id='head-title'><h1><a id='head-title-root' href='/'>{{ site.title }}</a> / <a id='head-title-child'>{{ page.title }}</a></h1></a>";
+	      document.getElementById("head-title-child").href = window.location.href;
 	    }
 	  </script>
 	</div>
