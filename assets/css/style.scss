@@ -114,7 +114,7 @@ header {
 .navbar-item a {
 	position: relative;
 	display: inline-block;
-	text-decoration: underline transparent;
+	text-decoration: transparent;
 	transition: text-decoration 300ms ease-in-out;
 	color: #b5e853;
 	text-align: center;
@@ -124,6 +124,7 @@ header {
 }
 
 .navbar-item a:hover {
+	text-decoration: underline;
 	text-decoration-color: #b5e853;
 }
 
