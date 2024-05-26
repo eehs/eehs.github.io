@@ -9,6 +9,12 @@ layout: default
 </div>
 
 <br>
+<br>
+
+{% if page.modified_date %}
+<h4><i>Modified on {{ page.modified_date | date: "%B %d, %Y" }}</i></h4>
+{% endif %}
+
 {% if page.tags %}
-  <small>tags: <em>{{ page.tags | join: "</em> <em>" }}</em></small>
+<small>tags: <em>{{ page.tags | join: "</em> <em>" }}</em></small>
 {% endif %}
