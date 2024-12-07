@@ -7,8 +7,8 @@ tags: Linux, Storage
 
 ## Purpose
 This short guide is meant for those of us who, more often that not find themselves struggling to remember the order to resizing LVM partitions, *myself* included. 😀
-<br><br>
 
+<br>
 ## Configuration in four steps
 Given you already have a working configuration of LVM up and running on Linux, with the appropriate *physical volumes (PV)* and *logical volumes (LV)* inside a *volume group (VG)*. There is an order to how we go about resizing them, which can be summed up in four steps.
 
