@@ -12,6 +12,12 @@ header {
 	box-shadow: 0px 0px 8px #b5e853;
 }
 
+.container img {
+        height: auto;
+        border: 2px solid transparent;
+        border-bottom-color: #b5e853;
+}
+
 .head-container {
 	position: relative;
 	display: flex;

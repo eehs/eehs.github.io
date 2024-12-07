@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h3 style="color: #bfbfbf; text-shadow: none">{{ page.date | date: "%B %d, %Y" }}</h3>
+<h3 style="color: #bfbfbf; text-shadow: none">{{ page.date | date: "%B %-d, %Y" }}</h3>
 
 <div class="content">
   {{ content }}
@@ -12,7 +12,7 @@ layout: default
 <br>
 
 {% if page.modified_date %}
-<h4><i>Modified on {{ page.modified_date | date: "%B %d, %Y" }}</i></h4>
+<h4><i>Modified on {{ page.modified_date | date: "%B %-d, %Y" }}</i></h4>
 {% endif %}
 
 {% if page.tags %}
