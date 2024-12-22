@@ -25,6 +25,9 @@ baseurl: ""
 url: "https://eehs.github.io" 
 github:
   profile: "https://github.com/eehs"
+feed_items: 5
+feed_update_period: daily
+feed_update_frequency: 1
 #google_analytics: "G-YF8K8TMKRL"
 
 # Build settings
