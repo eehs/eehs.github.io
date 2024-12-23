@@ -12,12 +12,28 @@
 
   <body>
     <header>
+      <div id="progress-bar"></div>
       <div class="head-container">
 	<img id="eehs-img" src="/assets/images/eehs.png"></img>
 	<div class="head">
   	  <script>
+            // Scroll progress bar (only visible on blog posts)
+            let processScroll = () => {
+              let docElem = document.documentElement;
+              docBody = document.body;
+              scrollTop = docElem["scrollTop"] || docBody["scrollTop"];
+              scrollBottom = (docElem["scrollHeight"] || docBody["scrollHeight"]) - window.innerHeight;
+              scrollPercent = scrollTop / scrollBottom * 100 + '%';
+
+              document.getElementById("progress-bar").style.setProperty("--scrollAmount", scrollPercent);	
+            }
+
+            if ("{{ page.layout }}" == "post") {
+              document.addEventListener("scroll", processScroll);
+	    }
+
+	    // Page shortcuts in header section
 	    let head = document.getElementsByClassName("head")[0];
-	
 	    if (window.location.pathname == "/") {
 	      head.innerHTML = "<h1>{{ site.title | default: site.github_repository_name }}</h1><h2 id='head-desc'>{{ site.description | default: site.github.project_tagline }}</h2>";
 	    } else {

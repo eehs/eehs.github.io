@@ -43,6 +43,15 @@ footer a:hover {
         border-bottom-color: #b5e853;
 }
 
+#progress-bar {
+	--scrollAmount: 0%;
+	background: #b5e853;
+	width: var(--scrollAmount);
+	height: 2px;
+	position: fixed;
+	top: 0;
+}
+
 .head-container {
 	position: relative;
 	display: flex;
