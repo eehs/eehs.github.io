@@ -50,6 +50,7 @@ This command reference is only applicable on my privately hosted *Counter-Strike
 - `!pm` ~ private messages a player.
 - `!help` ~ displays a small command reference to chat.
 - `!chelp` ~ displays a command reference of all commands to console.
+- `!restart` ~ runs `mp_restartgame 1`. (for basic troubleshooting)
 
 <br><br>
 ### Practice commands
