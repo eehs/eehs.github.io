@@ -3,6 +3,20 @@
 
 @import "{{ site.theme }}";
 
+// Default jekyll theme overrides
+ul li {
+        list-style-image: none;
+}
+
+li::marker {
+        color: #b5e853;
+}
+
+blockquote {
+        border-left: 2px dotted $blockquote-border;
+}
+
+// Actual styling starts here
 code.highlighter-rouge {
 	color: #b5e853;
 }
