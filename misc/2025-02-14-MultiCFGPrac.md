@@ -5,7 +5,7 @@ permalink: multicfgprac-command-reference
 tags: CS2, Metamod, CounterStrikeSharp
 ---
 
-This command reference is only applicable on my privately hosted *Counter-Strike 2* servers. For those interested in using/writing plugins on CS2 dedicated servers, you can check out [Metamod](https://cs2.poggu.me/) and [CounterStrikeSharp](https://docs.cssharp.dev/). The community servers you *probably* know of (running FFA DM, KZ or SURF) make use of such modding frameworks.
+This command reference is only applicable on my privately hosted *Counter-Strike 2* servers. For those interested in using/writing plugins on CS2 dedicated servers, you can check out [Metamod](https://cs2.poggu.me/){:target="_blank"} and [CounterStrikeSharp](https://docs.cssharp.dev/){:target="_blank"}. The community servers you *probably* know of (running FFA DM, KZ or SURF) make use of such modding frameworks.
 
 <br>
 ## <u>Features</u>
