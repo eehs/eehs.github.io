@@ -39,7 +39,7 @@ This command reference is only applicable on my privately hosted *Counter-Strike
 - `!hsdm` ~ headshot-only deathmatch. [[WIP #1](#wip1)]
 - `!prac` ~ nade practice mode.
 - `!comp` ~ competitive mode.
-- `!retake` ~ retake mode. (uses the [cs2-retakes](https://github.com/B3none/cs2-retakes) plugin)
+- `!retake` ~ retake mode. (uses the [cs2-retakes](https://github.com/B3none/cs2-retakes){:target="_blank"} plugin)
 - `!guns` ~ lists available weapons players can equip.
 - `!models` ~ lists custom player models to console. (e.g. type `!flash` to become ⚡**The Flash**⚡)
 - `!ogmodel` ~ reverts to the default player model.
