@@ -2,7 +2,7 @@
 layout: post
 title: "MultiCFGPrac Command Reference"
 permalink: multicfgprac-command-reference
-modified_date: 2025-02-24
+modified_date: 2025-02-27
 tags: CS2, Metamod, CounterStrikeSharp
 ---
 
@@ -32,30 +32,34 @@ This command reference is only applicable on my privately hosted *Counter-Strike
 ## <u>Commands</u>
 > NOTE: This is an example of a `<required>` and `[optional]` parameter.
 
-### General commands
+### General
 - `!dm` ~ normal deathmatch. [[WIP #1](#wip1)]
 - `!awp` ~ AWP-only deathmatch. [[WIP #1](#wip1)]
 - `!pistoldm` ~ pistol-only deathmatch. [[WIP #1](#wip1)]
 - `!hsdm` ~ headshot-only deathmatch. [[WIP #1](#wip1)]
 - `!prac` ~ nade practice mode.
 - `!comp` ~ competitive mode.
-- `!retake` ~ retake mode. (uses the [cs2-retakes](https://github.com/B3none/cs2-retakes){:target="_blank"} plugin)
+- `!retake` ~ retake mode. (uses [cs2-retakes](https://github.com/B3none/cs2-retakes){:target="_blank"} by [B3none](https://github.com/B3none){:target="_blank"})
 - `!guns` ~ lists available weapons players can equip.
-- `!models` ~ lists custom player models to console. (e.g. type `!flash` to become ⚡**The Flash**⚡)
-- `!ogmodel` ~ reverts to the default player model.
-
-<br><br>
-### Miscellaneous commands
 - `!map <map name>` ~ changes map. (`<map name>` can be **'de_dust2'** or **'dust2'**)
-- `!dropgun` ~ toggles `mp_death_drop_gun` on/off.
-- `!showimpacts` ~ toggles `sv_showimpacts` onoff.
-- `!pm <name> <message>` ~ private messages a player.
 - `!help` ~ displays a small command reference to chat.
 - `!chelp` ~ displays a command reference of all commands to console.
 - `!restart` ~ runs `mp_restartgame 1`. (for basic troubleshooting)
 
 <br><br>
-### Practice commands
+### Miscellaneous & Fun
+- `!pm <name> <message>` ~ private messages a player.
+> NOTE: The below *fun* commands are only enabled in practice mode.
+- `!models` ~ lists custom player models to console. (e.g. type `!flash` to become ⚡**The Flash**⚡)
+- `!ogmodel` ~ reverts to the default player model.
+- `!emotes` ~ lists emotes player can do. (uses [FortniteEmotesNDances](https://github.com/Cruze03/FortniteEmotesNDances){:target="_blank"} by [Cruze03](https://github.com/Cruze03){:target="_blank"})
+- `!dances` ~ lists dances player can do. (uses [FortniteEmotesNDances](https://github.com/Cruze03/FortniteEmotesNDances){:target="_blank"} by [Cruze03](https://github.com/Cruze03){:target="_blank"})
+
+<br><br>
+### Practice
+- `!god` ~ toggles god mode for all players. (stops at *1 HP*)
+- `!dropgun` ~ toggles `mp_death_drop_gun` on/off.
+- `!showimpacts` ~ toggles `sv_showimpacts` onoff.
 - `!savepos` ~ saves player's current position. (future respawns will inherit this position, until you call `!delpos`)
 - `!tpos` ~ teleports to a saved player position.
 - `!delpos` ~ deletes the saved player position.
@@ -65,7 +69,7 @@ This command reference is only applicable on my privately hosted *Counter-Strike
 - `!restoreprops` ~ restores all broken props.
 
 <br>
-#### Bot commands
+#### Bot
 - `!bot` ~ spawns a bot where player is standing. (use `!tbot` or `!ctbot` for specific teams)
 - `!crouchbot [bot name]` ~ spawns a crouching bot where player is standing when ran without arguments; and toggles the crouching state of `bot name` when given a name.
 - `!boost` ~ spawns a bot boosting player. (use `!crouchboost` for a crouching bot)
@@ -76,7 +80,7 @@ This command reference is only applicable on my privately hosted *Counter-Strike
 - `!armor <bot name>` ~ toggles a bot's kevlar/full armor on/off.
  
 <br>
-#### Grenade commands
+#### Grenade
 - `!clear` ~ clears all thrown grenades on the map.
 > NOTE: Commands below default to the most recently accessed **grenade ID** if none is provided.
 - `!nlist [grenade id] [filter]` ~ displays all saved grenade lineups on current map; can be filtered with a `grenade id` or the case-sensitive `filter` (by lineup name) parameter.
@@ -93,6 +97,10 @@ This command reference is only applicable on my privately hosted *Counter-Strike
 
 <br><br><br>
 ## <u>Features to come...</u>
+- Miscellaneous & Fun
+  - Weapon skins plugin. ([cs2-WeaponPaints](https://github.com/Nereziel/cs2-WeaponPaints) and [cs2-WeaponPaints-website](https://github.com/L1teD/cs2-WeaponPaints-website))
+
+<br>
 - Practice mode
   - Spawn a bot where player is aiming. (`!botplace`)
   - Add an option to teleport to all T/CT spawnpoints for each map.
