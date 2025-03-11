@@ -197,6 +197,14 @@ footer a:hover {
 	color: #fff;
 }
 
+#discord-footer-img {
+        content: url(/assets/images/discord-footer.png);
+}
+
+#github-footer-img {
+        content: url(/assets/images/github-footer.png);
+}
+
 #rss-img {
         content: url(/assets/images/square-rss-solid.png);
 }
@@ -277,6 +285,15 @@ and (max-width: 480px) {
 		margin-left: 7px;
 	}
 
+        #discord-footer-img {
+                transform: scale(1.55);
+        }
+
+        #discord-footer-img, #github-footer-img {
+                width: 0.9rem;
+                height: 0.9rem;
+        }
+
         #rss-img {
 		width: 0.9rem;
 		height: 1rem;
@@ -351,6 +368,15 @@ and (min-width: 720px) {
 	.content {
 		overflow-wrap: break-word; 
 	}
+
+        #discord-footer-img {
+                transform: scale(1.5);
+        }
+
+        #discord-footer-img, #github-footer-img {
+                width: 1.2rem;
+                height: 1.2rem;
+        }
 
         #rss-img {
 		width: 1.2rem;
