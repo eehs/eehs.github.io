@@ -28,7 +28,7 @@ github:
 feed_items: 5
 feed_update_period: daily
 feed_update_frequency: 1
-#google_analytics: "G-YF8K8TMKRL"
+umami_analytics: "ee7d6ddf-fb63-4e27-a5d4-adbf92fb4f01"
 
 # Build settings
 remote_theme: pages-themes/hacker@v0.2.0
