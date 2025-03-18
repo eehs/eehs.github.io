@@ -14,38 +14,45 @@ blockquote {
 }
 
 // Actual styling starts here
+img {
+        display: block;
+        max-width: 3.5rem;
+}
+
 code.highlighter-rouge {
-	color: #b5e853;
+        color: #b5e853;
 }
 
 header {
-	border-bottom: 2.5px solid #b5e853;
-	box-shadow: 0px 0px 8px #b5e853;
+        border-bottom: 2.5px solid #b5e853;
+        box-shadow: 0px 0px 8px #b5e853;
 }
 
 body {
-        min-height: 100vh;
         display: flex;
         flex-direction: column;
+        min-height: 100vh;
 }
 
 footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: #b5e853;
+        gap: 10px;
         margin-top: auto;
         padding-top: 6rem;
         margin-bottom: 1rem;
-        text-align: center;
 }
 
 footer a {
         color: #b5e853;
         text-decoration: none;
-	text-decoration-color: #b5e853;
-        vertical-align: middle;
+        text-decoration-color: #b5e853;
 }
 
 footer a:hover {
-	text-decoration: underline;
+        text-decoration: underline;
 }
 
 .container img {
@@ -55,79 +62,74 @@ footer a:hover {
 }
 
 #progress-bar {
-	--scrollAmount: 0%;
-	background: #b5e853;
-	width: var(--scrollAmount);
-	height: 2px;
-	position: fixed;
-	top: 0;
+        --scrollAmount: 0%;
+        background: #b5e853;
+        width: var(--scrollAmount);
+        height: 2px;
+        position: fixed;
+        top: 0;
 }
 
 .head-container {
-	position: relative;
-	display: flex;
-	flex-direction: row;
+        display: flex;
+}
+
+.head-container .links-container {
+        align-items: center;
 }
 
 .head {
-	display: flex;
-	flex-direction: column;
+        max-width: 800px;
 }
 
 #head-title {
-	text-decoration: none;
+        text-decoration: none;
 }
 
 #head-title-root, #head-title-child {
-	color: #b5e853;
-	text-decoration: none;
-	text-shadow: none;
+        color: #b5e853;
+        text-decoration: none;
+        text-shadow: none;
 }
 
 #head-title-root:hover, #head-title-child:hover {
-	cursor: pointer;
+        cursor: pointer;
 }
 
 #head-desc {
-	color: #aaa;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
-	margin-bottom: -8px;
+        color: #aaa;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
+        margin-bottom: -8px;
+}
+
+.links-container {
+        display: flex;
+        margin-left: auto;
+        margin-right: 5px;
 }
 
 .link-icon {
-	display: inline-flex;
-	flex-wrap: wrap;
-	flex: 1;
-	margin: 4px;
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex: 1;
+        margin: 4px;
 }
 
 .link-icon:first-child {
-	margin-right: 4px;
+        margin-right: 4px;
 }
 
 .link-icon img:hover {
-	transition: 0.2s ease-in-out;
-	border-radius: 5px;
-}
-
-#discord-img {
-	content: url(/assets/images/discord.png);
+        transition: 0.2s ease-in-out;
+        border-radius: 5px;
 }
 
 #discord-img:before, #discord-img:hover {
         box-shadow: 0px 0px 10px #5865f2;
 }
 
-#github-img {
-	content: url(/assets/images/github.png);
-}
-
 #github-img:before, #github-img:hover {
         box-shadow: 0px 0px 10px #ffffff;
-}
-
-#htb-img {
-	content: url(/assets/images/htb.png);
 }
 
 #htb-img:before, #htb-img:hover {
@@ -135,148 +137,146 @@ footer a:hover {
 }
 
 .navbar {
-	display: flex;
-	justify-content: space-between;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        gap: 20px;
+        padding-left: 20px;
+        margin-top: -40px;
+        margin-bottom: 40px;
 }
 
-.navbar-links {
-	display: flex;
-	list-style: none;
+.navbar a {
+        display: block;
+        text-decoration: transparent;
+        color: #b5e853;
+        text-align: center;
+        border-left: 3px outset #b5e853;
+        border-right: 3px outset #b5e853;
+        border-bottom: 3px outset #b5e853;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 10px 40px;
 }
 
-.navbar-item {
-	display: inline-block;
-	position: relative;
-	list-style-image: none;
-	margin-right: 5%;
-	border-left: 3px outset #b5e853;
-	border-right: 3px outset #b5e853;
-	border-bottom: 3px outset #b5e853;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	padding: 0;
+.navbar a:hover {
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.075);
 }
 
-.navbar-item:hover {
-	box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.075);
+.navbar .icon {
+        display: none;
 }
 
-.navbar-item a {
-	position: relative;
-	display: inline-block;
-	text-decoration: transparent;
-	color: #b5e853;
-	text-align: center;
-	padding: 3% 0% 3% 0%;
-	height: 82%;
+#navbar-dropdown-bar-img {
+        width: 1.5rem;
+        height: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+        .navbar a:not(:first-child) {
+                display: none;
+        }
+
+        .navbar a.icon {
+                display: block;
+        }
+}
+
+@media screen and (max-width: 600px) {
+        .navbar.responsive {
+                position: relative;
+                flex-direction: column;
+        }
+
+        .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-color: #151515;
+        }
+
+        .navbar.responsive .icon img {
+                content: url(/assets/images/xmark-solid.svg);
+        }
+
+        .navbar.responsive a {
+                display: block;
+                text-align: center;
+                padding: 10px 10px;
+        }
+
+        .navbar.responsive a:not(:first-child):not(.icon) {
+                margin-top: -24px;
+        }
 }
 
 #post-link {
-	color: #e5e7e0;
-	font-size: 115%;
-	text-decoration: none;
-	text-shadow: 0 0 5px rgba(229, 231, 224, 0.5)
+        color: #e5e7e0;
+        font-size: 115%;
+        text-decoration: none;
+        text-shadow: 0 0 5px rgba(229, 231, 224, 0.5)
 }
 
 #post-link:hover, #post-link:hover div {
-	text-decoration: underline;
-	text-decoration-color: #b5e853;
+        text-decoration: underline;
+        text-decoration-color: #b5e853;
 }
 
 .content {
-	color: #fff;
-}
-
-#discord-footer-img {
-        content: url(/assets/images/discord-footer.png);
-}
-
-#github-footer-img {
-        content: url(/assets/images/github-footer.png);
-}
-
-#rss-img {
-        content: url(/assets/images/square-rss-solid.png);
+        color: #fff;
+        overflow-wrap: break-word;
 }
 
 #page-not-found-container {
-	text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 110px;
+        justify-content: center;
+        align-items: center;
+}
+
+#page-not-found-container img {
+        max-width: 17.5rem;
+        border: none;
 }
 
 /* Mobile devices (Portrait) */
 @media only screen
 and (min-width: 320px) 
 and (max-width: 480px) {
-        footer {
-                font-size: 0.6em;
+        .head {
+                margin-top: -5px;
+                margin-left: 10px;
+                width: 700px;
         }
 
-	.head {
-		margin-top: -7px;
-		margin-right: 40px;
-		margin-left: 10px;
-		margin-bottom: 20px;
-	}
+        #head-title {
+                margin-top: 0px;
+                margin-right: 5px;
+        }
 
-	#head-title {
-		margin-top: 0px;
-		margin-right: 5px;
-	}
+        #eehs-img {
+                width: 2.3rem;
+                height: 2.3rem;
+                margin-left: 10px;
+        }
 
-	#head-desc {
-		margin-right: 30px;
-		margin-bottom: -25px;
-	}
-
-	#eehs-img {
-		width: 2.3rem;
-		height: 2.3rem;
-		margin-top: -5px;
-		margin-left: 10px;
-	}
-
-	.links-container {
-		position: absolute;
-		margin-top: -3%;
-		right: 0%;
-		width: 2rem;
-	}
-
-	.links {
-		position: absolute;
-		top: 5%;
-		right: 16%;
-	}	
-
-	#discord-img, #github-img, #htb-img {
-		width: 2rem;
-		height: 2rem;	
-	}
-
-	.navbar {
-		margin-top: -60px;
-		margin-left: -4.4%;
-	}
-
-	.navbar-links {
-		font-size: 22px;
-	}
-
-	.navbar-item a {
-		width: 160px;
-		margin: 0px;
-	}
+        #discord-img, #github-img, #htb-img {
+                width: 2rem;
+                height: 2rem;	
+        }
 
         .posts-list li {
                 margin-bottom: 15px;
         }
 
-	.posts-list a {
-		margin-left: 7px;
-	}
+        .posts-list a {
+                margin-left: 7px;
+        }
 
         #discord-footer-img {
-                transform: scale(1.55);
+                transform: scale(1.6);
         }
 
         #discord-footer-img, #github-footer-img {
@@ -285,20 +285,61 @@ and (max-width: 480px) {
         }
 
         #rss-img {
-		width: 0.9rem;
-		height: 1rem;
+                width: 0.9rem;
+                height: 1rem;
         }
 
-	#page-not-found-container {
-		margin-top: 20px;
-	}
+        #page-not-found-container img {
+                width: 10rem;
+        }
 
-	#page-not-found-container img {
-		margin-top: 30%;
-		margin-bottom: 8%;
-		width: 10rem;
-		height: 4.5rem;
-	}
+        #page-not-found-container h3 {
+                font-size: 0.8em;
+        }
+
+        footer {
+                font-size: 0.6em;
+        }
+}
+
+/* Tablets (Portrait) */
+@media only screen
+and (min-width: 480px) {
+        .head {
+                font-size: 95%;
+                margin-top: -5px;
+                margin-left: 10px;
+                margin-right: 50px;
+        }
+
+        .head-no-desc {
+                margin-top: 1px;
+        }
+
+        #eehs-img {
+                width: 2.5rem;
+                height: 2.5rem;
+                margin-left: 10px;
+        }
+
+        #discord-img, #github-img, #htb-img {
+                width: 2.2rem;
+                height: 2.2rem;	
+        }
+
+        #discord-footer-img {
+                transform: scale(1.6);
+        }
+
+        #discord-footer-img, #github-footer-img {
+                width: 1rem;
+                height: 1rem;
+        }
+
+        #rss-img {
+                width: 1rem;
+                height: 1.1rem;
+        }
 }
 
 /* Laptops and desktop monitors */
@@ -308,59 +349,33 @@ and (min-width: 720px) {
                 font-size: 0.8em;
         }
 
-	.head {
-		margin-top: -5px;
-		margin-left: 60px;
-		margin-bottom: 0px;
-		margin-right: 200px;
-	}
+        .head {
+                margin-top: -7px;
+                margin-left: 20px;
+                margin-right: 200px;
+        }
 
-	#head-title {
-		margin-top: 12px;
-	}
+        .head-no-desc {
+                margin-top: 5px;
+        }
 
-	#head-desc {
-		margin-right: 200px;
-	}
+        #head-title {
+                margin-top: 12px;
+        }
 
-	#eehs-img {
-		width: 3.5rem;
-		height: 3.5rem;
-		margin-top: -2px;
-		margin-left: 20px;
-	}
+        #eehs-img {
+                width: 3.5rem;
+                height: 3.5rem;
+                margin-left: 30px;
+        }
 
-	.links-container {
-		position: absolute;
-		top: 10%;
-		right: 1.05%;
-	}
-
-	#discord-img, #github-img, #htb-img {
-		width: 2.5rem;
-		height: 2.5rem;
-	}
-
-	.navbar {
-		margin-top: -42px;
-	}
-
-	.navbar-links {
-		margin-top: 0.3%;
-		font-size: 20px;
-	}
-
-	.navbar-item a {
-		width: 170px;
-		margin: 0px;
-	}
-
-	.content {
-		overflow-wrap: break-word; 
-	}
+        #discord-img, #github-img, #htb-img {
+                width: 2.5rem;
+                height: 2.5rem;
+        }
 
         #discord-footer-img {
-                transform: scale(1.5);
+                transform: scale(1.65);
         }
 
         #discord-footer-img, #github-footer-img {
@@ -369,31 +384,30 @@ and (min-width: 720px) {
         }
 
         #rss-img {
-		width: 1.2rem;
-		height: 1.3rem;
+                width: 1.2rem;
+                height: 1.3rem;
         }
 
-	#page-not-found-container {
-		margin-top: 85px;
-	}
+        #page-not-found-container img {
+                width: 16rem;
+        }
+}
 
-	#page-not-found-container img {
-		margin-bottom: 45px;
-		width: 16rem;
-		height: 5.5rem;
-	}
+@media only screen
+and (min-width: 1000px) {
+        .head {
+                margin-left: 60px;
+        }
+
+        #head-desc {
+                margin-left: -40px;
+        }
 }
 
 /* Desktop monitors */
 @media only screen
 and (min-width: 1920px) {
-	#page-not-found-container {
-		margin-top: 220px;
-	}
-
-	#page-not-found-container img {
-		margin-bottom: 45px;
-		width: 17.5rem;
-		height: 6.3rem;
-	}
+        #page-not-found-container img {
+                width: 17.5rem;
+        }
 }

@@ -14,7 +14,7 @@
     <header>
       <div id="progress-bar"></div>
       <div class="head-container">
-	<img id="eehs-img" src="/assets/images/eehs.png"></img>
+        <img id="eehs-img" src="/assets/images/eehs.png"></img>
 	<div class="head">
   	  <script>
             // Scroll progress bar (only visible for blog posts)
@@ -37,8 +37,9 @@
 	    if (window.location.pathname == "/") {
 	      head.innerHTML = "<h1>{{ site.title | default: site.github_repository_name }}</h1><h2 id='head-desc'>{{ site.description | default: site.github.project_tagline }}</h2>";
 	    } else {
-	      head.innerHTML = "<a id='head-title'><h1><a id='head-title-root' href='/'>{{ site.title }}</a> / <a id='head-title-child'>{{ page.title }}</a></h1></a>";
+	      head.innerHTML = "<h1><a id='head-title-root' href='/'>{{ site.title }}</a> / <a id='head-title-child'>{{ page.title }}</a></h1>";
 	      document.getElementById("head-title-child").href = window.location.href;
+              head.classList.add("head-no-desc");
 	    }
 	  </script>
 	</div>
@@ -46,42 +47,25 @@
         <div class="links-container">
           <div class="links">
             <a class="link-icon" href="https://discordapp.com/users/373441053275062272" data-umami-event="Discord (header)" target="_blank">
-              <img id="discord-img"></img>
+              <img id="discord-img" src="/assets/images/discord.png"></img>
             </a>
             <a class="link-icon" href="https://github.com/eehs" data-umami-event="GitHub (header)" target="_blank">
-              <img id="github-img"></img>
+              <img id="github-img" src="/assets/images/github.png"></img>
             </a>
             <a class="link-icon" href="https://app.hackthebox.com/users/486143" data-umami-event="Hack The Box (header)" target="_blank">
-              <img id="htb-img"></img>
+              <img id="htb-img" src="/assets/images/htb.png"></img>
             </a>
           </div>
         </div>
       </div>
     </header>
 
-    <nav class="navbar">
-      <ul class="navbar-links">
-        <li class="navbar-item"><a href="/">Home</a></li>
-        <li class="navbar-item"><a href="/about">About</a></li>
-
-	<script>
-          let navbar_items = document.getElementsByClassName("navbar-item");
-
-          for (let i = 0; i < navbar_items.length; i++) {
-	    let navbar_item_a_tag = navbar_items[i].children[0];
-
-            if (navbar_item_a_tag.href == window.location.href) {
-	      navbar_items[i].style.backgroundColor = "#91b744";
-	      navbar_items[i].style.boxShadow = "none";
-
-              navbar_item_a_tag.style.color = "#262626";
-	      navbar_item_a_tag.style.textDecoration = "none";
-	      navbar_item_a_tag.style.textShadow = "0 0 5px rgba(38, 38, 38, 0.5)";
-            }
-          }
-        </script>
-      </ul>
-    </nav>	
+    <div class="navbar" id="navbar">
+      <a class="navbar-item" href="/">Home</a>
+      <a class="navbar-item" href="/projects">Projects</a>
+      <a class="navbar-item" href="/about">About</a>
+      <a href="javascript:void(0)" class="icon" onclick="responsiveNavbar()"><img id="navbar-dropdown-bar-img" src="/assets/images/bars-solid.svg"</img></a>
+    </div>
 
     <div class="container">
       <section id="main_content">
@@ -90,16 +74,68 @@
     </div>
 
     <footer>
-      © 2025 eehs • <b><a href="https://github.com/pages-themes/hacker" target="_blank">Hacker</a></b> Theme •
-      <a class="link-icon" href="https://discordapp.com/users/373441053275062272" data-umami-event="Discord (footer)" target="_blank">
-        <img id="discord-footer-img"></img>
-      </a>
-      <a class="link-icon" href="https://github.com/eehs" data-umami-event="GitHub (footer)" target="_blank">
-        <img id="github-footer-img"></img>
-      </a>
-      <a class="link-icon" href="/feed.xml" data-umami-event="RSS (footer)" title="Subscribe via RSS" target="_blank">
-        <img id="rss-img"></img>
-      </a>
+      <span>© 2025 eehs</span>
+      <span>•</span>
+      <span><b><a href="https://github.com/pages-themes/hacker" target="_blank">Hacker</a></b> Theme</span>
+      <span>•</span>
+      <span>
+        <a class="link-icon" href="https://discordapp.com/users/373441053275062272" data-umami-event="Discord (footer)" target="_blank">
+          <img id="discord-footer-img" src="/assets/images/discord-footer.png"></img>
+        </a>
+      </span>
+      <span>
+        <a class="link-icon" href="https://github.com/eehs" data-umami-event="GitHub (footer)" target="_blank">
+          <img id="github-footer-img" src="/assets/images/github-footer.png"></img>
+        </a>
+      </span>
+      <span>
+        <a class="link-icon" href="/feed.xml" data-umami-event="RSS (footer)" title="Subscribe via RSS" target="_blank">
+          <img id="rss-img" src="/assets/images/square-rss-solid.png"></img>
+        </a>
+      </span>
     </footer>
+
+    <script>
+      function responsiveNavbar() {
+        var x = document.getElementById("navbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+
+          if (window.location.pathname != "/home") {
+            let dropdown_icon = document.getElementsByClassName("icon")[0];
+
+            dropdown_icon.style.borderLeft = "3px solid #91b744";
+            dropdown_icon.style.borderBottom = "none";
+            dropdown_icon.style.borderBottomLeftRadius = "unset";
+            dropdown_icon.style.borderBottomRightRadius = "unset";
+          }
+        } else {
+          x.className = "navbar";
+
+          let dropdown_icon = document.getElementsByClassName("icon")[0];
+
+          dropdown_icon.style.backgroundColor = "";
+          dropdown_icon.style.borderLeft = "3px outset #b5e853";
+          dropdown_icon.style.borderBottom = "3px outset #b5e853";
+          dropdown_icon.style.borderBottomLeftRadius = "5px";
+          dropdown_icon.style.borderBottomRightRadius = "5px";
+        }
+      }
+
+      let navbar_items = document.getElementsByClassName("navbar-item");
+
+      for (let i = 0; i < navbar_items.length; i++) {
+        let navbar_item_a_tag = navbar_items[i];
+
+        if (navbar_item_a_tag.href == window.location.href) {
+          navbar_items[i].style.backgroundColor = "#91b744";
+          navbar_items[i].style.boxShadow = "none";
+
+          navbar_item_a_tag.style.color = "#262626";
+          navbar_item_a_tag.style.textDecoration = "none";
+          navbar_item_a_tag.style.textShadow = "0 0 5px rgba(38, 38, 38, 0.5)";
+        }
+      }
+    </script>
   </body>
 </html>
