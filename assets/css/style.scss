@@ -173,6 +173,10 @@ footer a:hover {
 }
 
 @media screen and (max-width: 600px) {
+        .navbar {
+                justify-content: center;
+        }
+
         .navbar a:not(:first-child) {
                 display: none;
         }
