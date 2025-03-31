@@ -256,7 +256,8 @@ footer a:hover {
 
 /* Mobile devices (Portrait) */
 @media only screen
-and (min-width: 320px) {
+and (min-width: 320px) 
+and (max-width: 480px) {
         .container video {
                 height: 150px;
         }
@@ -431,7 +432,6 @@ and (min-width: 1000px) {
         }
 
         .head {
-                max-width: 500px;
                 margin-left: 60px;
         }
 
