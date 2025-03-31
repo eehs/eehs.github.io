@@ -197,12 +197,12 @@ footer a:hover {
         .navbar.responsive {
                 position: relative;
                 flex-direction: column;
-                margin-right: 20px;
+                padding-right: 20px;
         }
 
         .navbar.responsive .icon {
                 position: absolute;
-                right: 0;
+                right: 20px;
                 top: 0;
                 background-color: #151515;
         }
