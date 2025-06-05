@@ -112,7 +112,7 @@ footer a:hover {
 .links-container {
         display: flex;
         margin-left: auto;
-        margin-right: 5px;
+        margin-right: 15px;
 }
 
 .link-icon {
@@ -139,8 +139,8 @@ footer a:hover {
         box-shadow: 0px 0px 10px #ffffff;
 }
 
-#htb-img:before, #htb-img:hover {
-        box-shadow: 0px 0px 10px #9fef00;
+#linkedin-img:before, #linkedin-img:hover {
+        box-shadow: 0px 0px 10px #0a66c2;
 }
 
 .navbar {
@@ -280,7 +280,7 @@ and (max-width: 480px) {
                 margin-left: 10px;
         }
 
-        #discord-img, #github-img, #htb-img {
+        #discord-img, #github-img, #linkedin-img {
                 width: 2rem;
                 height: 2rem;	
         }
@@ -297,7 +297,11 @@ and (max-width: 480px) {
                 transform: scale(1.6);
         }
 
-        #discord-footer-img, #github-footer-img {
+        #linkedin-footer-img {
+                transform: scale(1.48);
+        }
+
+        #discord-footer-img, #github-footer-img, #linkedin-footer-img {
                 width: 0.9rem;
                 height: 0.9rem;
         }
@@ -351,7 +355,7 @@ and (min-width: 480px) {
                 margin-left: 10px;
         }
 
-        #discord-img, #github-img, #htb-img {
+        #discord-img, #github-img, #linkedin-img {
                 width: 2.2rem;
                 height: 2.2rem;	
         }
@@ -360,7 +364,11 @@ and (min-width: 480px) {
                 transform: scale(1.6);
         }
 
-        #discord-footer-img, #github-footer-img {
+        #linkedin-footer-img {
+                transform: scale(1.48);
+        }
+
+        #discord-footer-img, #github-footer-img, #linkedin-footer-img {
                 width: 1rem;
                 height: 1rem;
         }
@@ -401,16 +409,20 @@ and (min-width: 720px) {
                 margin-left: 30px;
         }
 
-        #discord-img, #github-img, #htb-img {
+        #discord-img, #github-img, #linkedin-img {
                 width: 2.5rem;
                 height: 2.5rem;
         }
 
         #discord-footer-img {
-                transform: scale(1.65);
+                transform: scale(1.6);
         }
 
-        #discord-footer-img, #github-footer-img {
+        #linkedin-footer-img {
+                transform: scale(1.48);
+        }
+
+        #discord-footer-img, #github-footer-img, #linkedin-footer-img {
                 width: 1.2rem;
                 height: 1.2rem;
         }
