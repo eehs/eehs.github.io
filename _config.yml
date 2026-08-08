@@ -20,7 +20,7 @@
 
 title: eehs's bl0g
 description: >- # this means to ignore newlines until "baseurl:"
-  Just an ordinary blog to organize my thoughts on all things tech-related.
+  Just an ordinary blog to organize my thoughts on all things tech related.
 baseurl: "" 
 url: "https://eehs.github.io" 
 github:

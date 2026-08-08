@@ -8,4 +8,4 @@ A terminal tab bookmarker for Linux that allows for saving the state of opened t
 
 <br>
 
-<h4>More projects are being cooked up, stay tuned!</h4>
+<h4>More projects are in the pipeline, so stay tuned!</h4>
