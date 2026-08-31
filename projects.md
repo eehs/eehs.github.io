@@ -8,4 +8,11 @@ A terminal tab bookmarker for Linux that allows for saving the state of opened t
 
 <br>
 
+## 2. Nginx-Fancyindex-Theme (forked project)
+<video controls preload muted style="border-radius: 2px"><source src="/assets/videos/nginx-fancyindex-theme-demo.mp4" type="video/mp4"></video>
+A *Material Design* theme for the NGINX Fancy Index module, all to make your NGINX directory listing prettier! I've also added features like additional search filters and recursive searching to suit my selfish purposes :). <small>[[source](https://github.com/eehs/Nginx-Fancyindex-Theme){:target="_blank"}]</small>
+
+
+<br>
+
 <h4>More projects are in the pipeline, so stay tuned!</h4>
